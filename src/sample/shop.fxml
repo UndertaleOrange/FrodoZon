@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerShop">
    <children>
-      <ImageView fitHeight="756.0" fitWidth="1321.0" pickOnBounds="true" preserveRatio="true" scaleX="1.21">
-         <image>
-            <Image url="@../../../../Desktop/Obchod/src/sample/Assets/shop.png" />
-         </image>
-      </ImageView>
+      <TableView fx:id="tableView" layoutX="278.0" layoutY="110.0" prefHeight="336.0" prefWidth="305.0">
+        <columns>
+            <TableColumn fx:id="column_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="column_name" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="column_price" prefWidth="75.0" text="Price" />
+          <TableColumn fx:id="column_description" prefWidth="75.0" text="Description" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -1,8 +1,5 @@
 package sample;
 //27.2.2020 commit test
-import Connection.connectionClass;
-import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -494,7 +490,7 @@ public class Controller {
     }
 
     public void connect(ActionEvent actionEvent) throws SQLException{
-        connectionClass conClass = new connectionClass();
+        connectionClass conClass = connectionClass.getInstance();
         Connection connection = conClass.getConnection();
         String sql = "select * from product";
         Statement statement = connection.createStatement();
