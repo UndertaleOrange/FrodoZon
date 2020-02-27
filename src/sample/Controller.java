@@ -1,5 +1,5 @@
 package sample;
-//
+//27.2.2020 commit test
 import Connection.connectionClass;
 import javafx.application.Application;
 import javafx.application.Platform;
