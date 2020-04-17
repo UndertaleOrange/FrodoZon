@@ -16,7 +16,7 @@ public class connectionClass {
       Connection connection = null;
     public Connection getConnection(){
         Connection connection;
-        String dbName = "online_shop";
+        String dbName = "game_shop";
         String user="root";
         String pass ="";
 

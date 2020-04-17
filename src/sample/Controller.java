@@ -50,7 +50,7 @@ public class Controller {
     public Label passLabel;
     public Rectangle logRect;
     public ImageView logButton;
-    File namesfile = new File("C:\\Users\\frede\\IdeaProjects\\Obchod\\src\\sample\\Assets\\names.txt");
+    File namesfile = new File("C:\\FrodoZon\\src\\sample\\Assets\\names.txt");
     public boolean menorepeat = false;
     public boolean onlyonce = true;
     public boolean repeat = true;
@@ -492,7 +492,7 @@ public class Controller {
     public void connect(ActionEvent actionEvent) throws SQLException{
         connectionClass conClass = connectionClass.getInstance();
         Connection connection = conClass.getConnection();
-        String sql = "select * from product";
+        String sql = "select * from categories";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {

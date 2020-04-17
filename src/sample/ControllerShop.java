@@ -17,42 +17,40 @@ import java.util.ResourceBundle;
 public class ControllerShop implements Initializable {
     connectionClass cn = connectionClass.getInstance();
     Connection connection = cn.getConnection();
-    ObservableList<product> observableList = FXCollections.observableArrayList();
+    ObservableList<categories> observableList = FXCollections.observableArrayList();
 
     @FXML
-    TableView<product> tableView = new TableView<>();
+    TableView<categories> tableView = new TableView<>();
     @FXML
-    TableColumn<product, String> column_id;
+    TableColumn<categories, String> column_CategoryID;
     @FXML
-    TableColumn<product, String> column_name;
+    TableColumn<categories, String> column_Nazov;
     @FXML
-    TableColumn<product, String> column_price;
-    @FXML
-    TableColumn<product, String> column_description;
+    TableColumn<categories, String> column_Popis;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        ObservableList<product> observableList = FXCollections.observableArrayList();
-        column_id.setCellValueFactory(new PropertyValueFactory<>("ID"));
-        column_name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        column_description.setCellValueFactory(new PropertyValueFactory<>("description"));
-        column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
-        String sql = "select * from product;";
+        ObservableList<categories> observableList = FXCollections.observableArrayList();
+        column_CategoryID.setCellValueFactory(new PropertyValueFactory<>("CategoryID"));
+        column_Nazov.setCellValueFactory(new PropertyValueFactory<>("Nazov"));
+        column_Popis.setCellValueFactory(new PropertyValueFactory<>("Popis"));
+
+        String sql = "select * from categories;";
         try {
             Statement statement;
             statement = connection.createStatement();
-            column_id = new TableColumn<>("ID");
-            column_name = new TableColumn<>("Name");
-            column_description = new TableColumn<>("Description");
-            column_price = new TableColumn<>("Price");
+            column_CategoryID = new TableColumn<>("CategoryID");
+            column_Nazov = new TableColumn<>("Nazov");
+            column_Popis = new TableColumn<>("Popis");
+
 
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
-                int id = rs.getInt("ID");
-                String name = rs.getString("name");
-                String description = rs.getString("description");
-                float price = rs.getFloat("price");
-                observableList.add(new product(id, name, description, price));
+                int CategoryID = rs.getInt("CategoryID");
+                String Nazov = rs.getString("Nazov");
+                String Popis = rs.getString("Popis");
+
+                observableList.add(new categories(CategoryID, Nazov, Popis));
             }
 
 
