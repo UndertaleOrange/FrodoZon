@@ -340,7 +340,7 @@ public class Controller {
                     W.write(sb.toString());
                     W.close();
                 } else {
-                    try (BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\frede\\IdeaProjects\\Obchod\\src\\sample\\Assets\\names.txt")))) {
+                    try (BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\FrodoZon\\src\\sample\\Assets\\names.txt")))) {
                         int skip = 0;
                         String line;
                         while ((line = reader.readLine()) != null) {
@@ -423,7 +423,7 @@ public class Controller {
                 String name = nameField.getText();
                 String pass = passField.getText();
                 int jetam = 0;
-                try (BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\frede\\IdeaProjects\\Obchod\\src\\sample\\Assets\\names.txt")))) {
+                try (BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\FrodoZon\\src\\sample\\Assets\\names.txt")))) {
                     int skip = 0;
                     String line;
 

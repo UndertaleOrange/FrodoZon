@@ -8,10 +8,9 @@
    <children>
       <TableView fx:id="tableView" layoutX="278.0" layoutY="110.0" prefHeight="336.0" prefWidth="305.0">
         <columns>
-            <TableColumn fx:id="column_id" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="column_name" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="column_price" prefWidth="75.0" text="Price" />
-          <TableColumn fx:id="column_description" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="column_CategoryID" prefWidth="75.0" text="CategoryID" />
+          <TableColumn fx:id="column_Nazov" prefWidth="75.0" text="Nazov" />
+          <TableColumn fx:id="column_Popis" prefWidth="75.0" text="Popis" />
         </columns>
       </TableView>
    </children>
