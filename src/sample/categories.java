@@ -3,7 +3,7 @@ package sample;
 public class categories {
     int CategoryID;
     String Nazov, Popis;
-    public categories(int ID, String name, String description) {
+    public categories(int CategoryID, String Nazov, String Popis) {
         this.CategoryID = CategoryID;
         this.Nazov = Nazov;
         this.Popis = Popis;
